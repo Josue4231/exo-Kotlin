@@ -17,10 +17,14 @@ import _10_Demos_et_tests.testerEnLot
  * @return Le nombre d'occurrences.
  */
 fun nombreOccurrences(target: Int, list: List<Int>): Int {
-    var count = 0
-    // A COMPLETER ICI
-    return count
+    for (i in list.indices) {
+        if (list[i] == target) {
+            return i + 1
+        }
+    }
+    return 0
 }
+
 
 /* -------------------
     Données de test

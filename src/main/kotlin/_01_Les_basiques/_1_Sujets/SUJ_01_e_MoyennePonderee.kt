@@ -16,11 +16,16 @@ import _10_Demos_et_tests.testerEnLot
  * @param listeCoefVal Liste de sous-listes [coef, val]
  * @return La moyenne pondérée.
  */
-fun moyennePonderee(listeCoefVal: List<List<Number>>): Double {
-    var moyenne = 0.0
-    // A COMPLETER ICI
-    return moyenne
+fun moyennePonderee(liste: List<List<Number>>): Double {
+    var num = 0.0
+    var den = 0.0
+    for ((coef, val_) in liste) {
+        num += coef.toDouble() * val_.toDouble()
+        den += coef.toDouble()
+    }
+    return num / den
 }
+
 
 /* -------------------
     Données de test
